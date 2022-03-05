@@ -48,10 +48,7 @@ async def ban_endpoint():
     """Get a guilds bans."""
     guild = client.get_guild(GUILD_ID)
     try:
-        ban_list = []
-        bans = await guild.bans()
-        for ban in bans:
-            ban_list.append(ban)
+        ban_list = await guild.bans()
 
     except discord.errors.Forbidden:
         raise fastapi.HTTPException(status_code=403, detail="Missing Permissions")
