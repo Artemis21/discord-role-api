@@ -68,7 +68,8 @@ Example response:
         "user_name": "MemberTwo",
         "user_discriminator": "0002",
         "user_is_bot": false,
-        "reason": "Banned for Nitro Scams"},
+        "reason": "Banned for Nitro Scams"
+        },
     ],
 }
 ```
