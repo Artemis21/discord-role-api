@@ -56,15 +56,11 @@ async def ban_endpoint():
     return {
         "bans": [
             {
-                "user": [
-                    {
-                        "userId": banEntry.user.id,
-                        "userName": banEntry.user.name,
-                        "userDiscriminator": banEntry.user.discriminator,
-                        "userIsBot": banEntry.user.bot,
-                    }
-                ],
-                "reason": banEntry.reason,
+                "user_id": ban_entry.user.id,
+                "user_name": ban_entry.user.name,
+                "user_discriminator": ban_entry.user.discriminator,
+                "user_is_bot": ban_entry.user.bot,
+                "reason": ban_entry.reason,
             }
             for ban_entry in ban_list
         ]
