@@ -55,20 +55,20 @@ This will return a JSON object with one key, `bans`, which maps to a list of ban
 Example response:
 ```json
 {
-    "bans":[
+    "bans": [
         {
-        "user_id": 123456789012345,
-        "user_name": "Member",
-        "user_discriminator": "0001",
-        "user_is_bot": false,
-        "reason": "Banned for Nitro Scams"
+            "user_id": 123456789012345,
+            "user_name": "Member",
+            "user_discriminator": "0001",
+            "user_is_bot": false,
+            "reason": "Banned for Nitro Scams"
         },
         {
-        "user_id": 123456789012323,
-        "user_name": "MemberTwo",
-        "user_discriminator": "0002",
-        "user_is_bot": false,
-        "reason": "Banned for Nitro Scams"
+            "user_id": 123456789012323,
+            "user_name": "MemberTwo",
+            "user_discriminator": "0002",
+            "user_is_bot": false,
+            "reason": "Banned for Nitro Scams"
         },
     ],
 }
