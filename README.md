@@ -22,7 +22,7 @@ A discord bot that exposes an API to get users' roles for a specific server.
 
 ## API
 
-The API currently exposes only one endpoint:
+The API currently exposes only two endpoints:
 
 #### `GET /users/{user_id}/roles`
 
@@ -45,3 +45,30 @@ Example response:
 ```
 
 If the user is not found, a 404 status code will be returned.
+
+#### `GET /bans`
+
+This will return a JSON object with one key, `bans`, which maps to a list of bans, starting with a `user` JSON object, followed by a `reason` JSON object. This mimics discord.py's representation of [BanEntry](https://discordpy.readthedocs.io/en/stable/api.html?highlight=banentry#discord.BanEntry)
+
+Example respons:
+```json
+{
+    "bans":[{
+        [
+        "userId": 123456789012345,
+        "userName": "Member",
+        "userDiscriminator": "0000",
+        "userIsBot": False
+        ],
+    "reason": "Banned for Nitro Scams"},
+    {
+    [
+        "userId": 123456789012323,
+        "userName": "MemberTwo",
+        "userDiscriminator": "0001",
+        "userIsBot": False
+        ],
+    "reason": "Banned for Nitro Scams"},
+    ]},
+}
+```

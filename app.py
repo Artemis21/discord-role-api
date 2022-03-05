@@ -42,3 +42,30 @@ async def test_endpoint(user_id: int) -> dict:
             } for role in member.roles if not role.is_default()
         ]
     }
+
+
+@server.get('/bans')
+async def ban_endpoint():
+    """Get a guilds bans."""
+    guild = client.get_guild(GUILD_ID)
+    try:
+        ban_list = []
+        bans = await guild.bans()
+        for ban in bans:
+            ban_list.append(ban)
+        
+    except Exception as e:
+        raise fastapi.HTTPException(status_code=404, detail=e)
+    return {
+        'bans': [
+            {
+                'user':[{
+                    'userId': banEntry.user.id,
+                    'userName': banEntry.user.name,
+                    'userDiscriminator': banEntry.user.discriminator,
+                    'userIsBot': banEntry.user.bot
+                }],
+                'reason': banEntry.reason
+            } for banEntry in ban_list
+        ]
+    } 
