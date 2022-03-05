@@ -69,6 +69,6 @@ async def ban_endpoint():
                 ],
                 "reason": banEntry.reason,
             }
-            for banEntry in ban_list
+            for ban_entry in ban_list
         ]
     }
