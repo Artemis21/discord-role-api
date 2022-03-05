@@ -64,10 +64,10 @@ Example response:
         "reason": "Banned for Nitro Scams"
         },
         {
-        "userId": 123456789012323,
-        "userName": "MemberTwo",
-        "userDiscriminator": "0002",
-        "userIsBot": false,
+        "user_id": 123456789012323,
+        "user_name": "MemberTwo",
+        "user_discriminator": "0002",
+        "user_is_bot": false,
         "reason": "Banned for Nitro Scams"},
     ],
 }
