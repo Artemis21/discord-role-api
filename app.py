@@ -53,8 +53,9 @@ async def ban_endpoint():
         for ban in bans:
             ban_list.append(ban)
 
-    except Exception as e:
-        raise fastapi.HTTPException(status_code=404, detail=e)
+    except discord.errors.Forbidden:
+        raise fastapi.HTTPException(status_code=403, detail="Missing Permissions")
+    
     return {
         "bans": [
             {
