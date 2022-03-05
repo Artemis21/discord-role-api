@@ -48,6 +48,8 @@ If the user is not found, a 404 status code will be returned.
 
 #### `GET /bans`
 
+Requires `Ban Members` permission
+
 This will return a JSON object with one key, `bans`, which maps to a list of bans, starting with a `user` JSON object, followed by a `reason` JSON object. This mimics discord.py's representation of [BanEntry](https://discordpy.readthedocs.io/en/stable/api.html?highlight=banentry#discord.BanEntry)
 
 Example response:
