@@ -69,6 +69,6 @@ Example respons:
         "userIsBot": False
         ],
     "reason": "Banned for Nitro Scams"},
-    ]},
+    ],
 }
 ```
